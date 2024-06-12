@@ -10,11 +10,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #16161a;
-  color: #fff;
-  font-family: "Tajawal", sans-serif;
-}
 
 /* Nav Bar */
 
@@ -56,7 +51,7 @@ header nav .header_logo img {
   height: 50px;
   border-radius: 100%;
   object-fit: cover;
-  border: 5px solid #3b3d4e93;
+  border: 5px solid #ffffff93;
   cursor: pointer;
 }
 
@@ -146,9 +141,11 @@ section.main ul li a:hover {
 .siema .quote {
   width: 99%;
   height: auto;
-  background-color: rgba(240, 240, 240, 0.3);
+  background-color: rgba(0, 0, 0, 0.582);
   border-radius: 5px;
   padding: 22px;
+  color: #fff;
+ 
   
 }
 .carousel-nav {
