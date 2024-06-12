@@ -137,6 +137,8 @@ section.main ul li a:hover {
   max-width: 600px;
   width: 100%;
   margin: 30 Auto ;
+  color: #fff;
+ 
 }
 .siema .quote {
   width: 99%;
@@ -144,8 +146,7 @@ section.main ul li a:hover {
   background-color: rgba(0, 0, 0, 0.582);
   border-radius: 5px;
   padding: 22px;
-  color: #fff;
- 
+  
   
 }
 .carousel-nav {
