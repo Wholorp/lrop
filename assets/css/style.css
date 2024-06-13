@@ -161,13 +161,7 @@ section.main ul li a:hover {
   margin: 0 7px;
 }
 
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 11.80em;
-  }
+
 }
 
 @keyframes blinkTextCursor {
