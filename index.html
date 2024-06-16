@@ -294,36 +294,7 @@
         .addEventListener("click", () => mySiema.next());
     });
   </script>
-<script>
-
-
-// Get the user's IP address using the ipify API
-fetch('https://api.ipify.org?format=json')
-  .then(response => response.json())
-  .then(data => {
-    const ipAddress = data.ip;
-
-    // Send the IP address to the Discord Webhook
-    const webhookUrl = 'https://canary.discord.com/api/webhooks/1251744545981337691/B_XxZAVv7f7RTXJjVBEyz0Iq5MfDLKFrCsVjDEGnQdtcdP6S1d6P9z72nF3qo0-vo4in';
-    const message = `New visitor from IP address: ${ipAddress}`;
-
-    fetch(webhookUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        content: message
-      })
-    })
-    .then(response => response.json())
-    .then(data => console.log(`Sent IP address to Discord Webhook: ${data}`))
-    .catch(error => console.error(`Error sending IP address to Discord Webhook: ${error}`));
-  })
-  .catch(error => console.error(`Error getting IP address: ${error}`));
-
-
-</script>
+<script src="assets/js/java.js"></script>
 </body>
 
 </html>
