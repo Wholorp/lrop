@@ -17,6 +17,7 @@
     rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 
   <style>
     body {
@@ -63,7 +64,7 @@
     animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 530ms steps(44) infinite normal;
     position: relative;
   bottom: 0px;
-  top: 120px;
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
   width: 2222px;
@@ -293,6 +294,36 @@
         .addEventListener("click", () => mySiema.next());
     });
   </script>
+<script>
+
+
+// Get the user's IP address using the ipify API
+fetch('https://api.ipify.org?format=json')
+  .then(response => response.json())
+  .then(data => {
+    const ipAddress = data.ip;
+
+    // Send the IP address to the Discord Webhook
+    const webhookUrl = 'https://canary.discord.com/api/webhooks/1251744545981337691/B_XxZAVv7f7RTXJjVBEyz0Iq5MfDLKFrCsVjDEGnQdtcdP6S1d6P9z72nF3qo0-vo4in';
+    const message = `New visitor from IP address: ${ipAddress}`;
+
+    fetch(webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: message
+      })
+    })
+    .then(response => response.json())
+    .then(data => console.log(`Sent IP address to Discord Webhook: ${data}`))
+    .catch(error => console.error(`Error sending IP address to Discord Webhook: ${error}`));
+  })
+  .catch(error => console.error(`Error getting IP address: ${error}`));
+
+
+</script>
 </body>
 
 </html>
